@@ -38,9 +38,9 @@ const problems = [
     <h2 class="text-h4 font-weight-bold mb-6 text-center">Какие проблемы мы решаем?</h2>
     <v-row align="stretch">
       <v-col v-for="problem in problems" :key="problem.title" cols="12" md="4">
-        <v-card class="pa-4 text-center fill-height" elevation="4">
+        <v-card class="pa-1 text-center fill-height" elevation="4">
           <v-card-text>
-            <v-icon size="48" class="mb-3" color="primary">{{ problem.icon }}</v-icon>
+            <v-icon size="60" class="mb-3" color="primary">{{ problem.icon }}</v-icon>
             <h3 class="text-h5 font-weight-medium">{{ problem.title }}</h3>
             <p class="text-body-2 mt-2">{{ problem.description }}</p>
           </v-card-text>

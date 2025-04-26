@@ -29,7 +29,7 @@ const aboutInfo = {
   <v-container class="py-12">
     <v-row justify="center" class="mb-8">
       <v-col cols="12" md="12" lg="12">
-        <h2 class="text-h2 text-center font-weight-bold mb-8">О проекте</h2>
+        <h1 class="responsive-title text-center font-weight-bold mb-8">О проекте</h1>
         <v-card class="pa-6 about-card" elevation="4">
           <h3 class="text-h4 font-weight-medium mb-4">{{ aboutInfo.title }}</h3>
           <p class="text-body-1">{{ aboutInfo.description }}</p>
@@ -47,7 +47,7 @@ const aboutInfo = {
       >
         <v-card class="d-flex flex-column justify-start align-center pa-4 text-center feature-card" elevation="2">
           <v-icon size="60" color="primary" class="mb-2">{{ feature.icon }}</v-icon>
-          <h4 class="text-h4 font-weight-bold mb-2">{{ feature.title }}</h4>
+          <h4 class="text-h5 font-weight-bold mb-2">{{ feature.title }}</h4>
           <p class="text-subtitle-1">{{ feature.description }}</p>
         </v-card>
       </v-col>

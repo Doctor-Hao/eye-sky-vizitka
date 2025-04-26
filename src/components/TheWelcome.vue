@@ -47,8 +47,8 @@ const getParallaxStyle = () => {
       <v-container class="fill-height d-flex flex-column align-center justify-center text-center">
         <v-responsive max-width="800">
           <div class="text-block mt-8">
-            <h1 class="title text-h2">Глаз Неба</h1>
-            <p class="subtitle text-h5">Интеллектуальная система мониторинга лесов с автономными дронами и ИИ-аналитикой</p>
+            <h1 class="title">Глаз Неба</h1>
+            <p class="subtitle">Интеллектуальная система мониторинга лесов с автономными дронами и ИИ-аналитикой</p>
           </div>
         </v-responsive>
       </v-container>
@@ -96,16 +96,18 @@ const getParallaxStyle = () => {
 
 .text-block {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(33, 33, 33, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 24px;
   border-radius: 12px;
 }
 
+/* Вместо фиксированных rem: */
 .title {
   margin: 0;
-  font-size: 2.5rem;
+  /* адаптивный размер: минимум 2rem, максимум 4rem, при этом растёт с шириной экрана */
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: bold;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -113,7 +115,8 @@ const getParallaxStyle = () => {
 
 .subtitle {
   margin: 8px 0 0;
-  font-size: 1.25rem;
+  /* минимум 1rem, максимум 2rem */
+  font-size: clamp(1rem, 4vw, 2rem);
   color: white;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }

@@ -63,18 +63,19 @@ function fallbackCopyText(text) {
     <h2 class="text-h4 font-weight-bold mb-6 text-center">Контакты</h2>
     <v-card class="mx-auto" max-width="800" elevation="6">
       <!-- Контактные кнопки -->
-      <v-card-text class="d-flex justify-center">
+      <v-card-text class="d-flex flex-column flex-sm-row align-center justify-center">
         <v-btn
           :href="contact.telegram.link"
           target="_blank"
           text
-          class="mx-4"
+          class="my-2 my-sm-0 mx-sm-4 border"
         >
           {{ contact.telegram.label }}
         </v-btn>
+
         <v-btn
           text
-          class="mx-4"
+          class="my-2 my-sm-0 mx-sm-4 border"
           @click="copyEmail"
         >
           <v-icon left class="mr-2">{{ contact.email.icon }}</v-icon>
@@ -82,6 +83,7 @@ function fallbackCopyText(text) {
         </v-btn>
       </v-card-text>
     </v-card>
+
     <!-- Snackbar уведомление -->
     <v-snackbar
       v-model="snackbar"
@@ -94,6 +96,7 @@ function fallbackCopyText(text) {
     </v-snackbar>
   </v-container>
 </template>
+
 
 <style scoped>
 /* Vuetify обеспечивает кроссбраузерность */

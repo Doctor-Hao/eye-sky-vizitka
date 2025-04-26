@@ -74,12 +74,12 @@ const droneStyle = computed(() => ({
 
 <template>
   <v-container>
-    <h2 class="text-h3 font-weight-bold mb-10 text-center">Как это работает?</h2>
+    <h1 class="responsive-title font-weight-bold mb-10 text-center">Как это работает?</h1>
 
     <!-- Большой экран: v-timeline -->
     <div v-if="!isMobile" class="timeline-wrapper" ref="wrapper">
       <v-icon :style="droneStyle" :size="iconSize" color="primary">mdi-drone</v-icon>
-      <v-timeline side="center" align-top>
+      <v-timeline align="center" align-top>
         <v-timeline-item
           v-for="(step, index) in steps"
           :key="index"
@@ -113,7 +113,7 @@ const droneStyle = computed(() => ({
           cols="12"
           class="d-flex justify-center"
         >
-          <v-card class="pa-4 mb-4 mx-auto" max-width="500">
+          <v-card class="pa-1 mb-2 mx-auto" max-width="500">
             <v-card-text class="text-center">
               <v-icon size="56" class="mb-2" color="primary">{{ step.icon }}</v-icon>
               <h3 class="text-h6 font-weight-bold mb-2">{{ step.title }}</h3>

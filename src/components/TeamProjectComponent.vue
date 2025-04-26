@@ -40,11 +40,11 @@ const team = [
   <section>
     <v-container fluid class="py-12">
       <!-- Заголовок -->
-      <v-row justify="center" class="mb-8">
-        <v-col cols="12" md="8">
-          <h2 class="text-h4 text-center font-weight-bold">
+      <v-row justify="center" class="mb-4">
+        <v-col cols="12">
+          <h1 class="responsive-title text-center font-weight-bold">
             Команда проекта
-          </h2>
+          </h1>
         </v-col>
       </v-row>
       <!-- Список участников -->
@@ -57,11 +57,11 @@ const team = [
             md="3"
         >
           <v-sheet elevation="2" rounded class="pa-4 text-center">
-              <v-avatar size="300" tile class="mx-auto mb-4">
+              <v-avatar size="100%" tile class="mx-auto mb-4">
             <img
                 :src="member.photo"
                 width="200"
-                height="600"
+                height="300"
                 alt="Фото {{ member.name }}"
                 style="object-fit: scale-down"
             />
