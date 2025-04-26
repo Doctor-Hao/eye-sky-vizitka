@@ -125,7 +125,6 @@ const getParallaxStyle = () => {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-  cursor: pointer;
   animation: bounce 2s infinite;
 }
 

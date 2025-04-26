@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection.vue";
 import HowItWorksSection from "@/components/HowItWorksSection.vue";
 import FooterSection from "@/components/FooterSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
+import TeamProjectComponent  from "@/components/TeamProjectComponent.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import AboutSection from "@/components/AboutSection.vue";
   <HowItWorksSection/>
   <ProblemsSection/>
   <!--  <ProductSection/>-->
+  <TeamProjectComponent/>
   <ContactSection/>
   <FooterSection/>
 </template>
