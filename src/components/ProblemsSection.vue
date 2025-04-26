@@ -1,21 +1,36 @@
 <script setup>
 const problems = [
-  {
-    icon: "mdi-cctv",
-    title: "Ограниченный контроль территории",
-    description: "Человеческий фактор и стационарные камеры не могут покрыть всю территорию."
+    {
+    icon: 'mdi-drone',
+    title: 'Доступ в труднодоступные зоны',
+    description: 'Наши дроны легко патрулируют болота, густой подлесок и сложный рельеф.'
   },
   {
-    icon: "mdi-clock-alert",
-    title: "Медленное реагирование",
-    description: "Охрана не всегда успевает вовремя отреагировать на инциденты."
+    icon: 'mdi-radar',
+    title: 'Покрытие всей территории',
+    description: 'Облёт по заранее заданным точкам исключает «слепые» зоны мониторинга.'
   },
   {
-    icon: "mdi-cash-multiple",
-    title: "Высокие расходы на безопасность",
-    description: "Огромные затраты на персонал и стационарные системы."
+    icon: 'mdi-bell-ring',
+    title: 'Мгновенные оповещения',
+    description: 'ИИ мгновенно фиксирует задымление/очаги пожаров и отправляет сигнал оператору.'
+  },
+  {
+    icon: 'mdi-calendar-alert',
+    title: 'Усиленный контроль в пожароопасный период',
+    description: 'Частые облёты зон повышенного риска в сухой сезон помогают вовремя выявлять любые очаги.'
+  },
+  {
+    icon: 'mdi-cash-minus',
+    title: 'Снижение эксплуатационных расходов',
+    description: 'Автоматизация сокращает затраты на наземные бригады, авиацию и стационарные системы.'
+  },
+  {
+    icon: 'mdi-chart-box-outline',
+    title: 'Аналитика и отчётность',
+    description: 'Генерируем подробные отчёты и статистику для планирования профилактических мероприятий.'
   }
-];
+]
 </script>
 
 <template>
@@ -26,7 +41,7 @@ const problems = [
         <v-card class="pa-4 text-center fill-height" elevation="4">
           <v-card-text>
             <v-icon size="48" class="mb-3" color="primary">{{ problem.icon }}</v-icon>
-            <h3 class="text-h6 font-weight-medium">{{ problem.title }}</h3>
+            <h3 class="text-h5 font-weight-medium">{{ problem.title }}</h3>
             <p class="text-body-2 mt-2">{{ problem.description }}</p>
           </v-card-text>
         </v-card>

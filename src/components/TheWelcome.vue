@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onMounted, onUnmounted} from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 // WebP + fallback
 import forestWebp from '@/assets/bg-forest.webp'
@@ -13,13 +13,13 @@ function handleScroll() {
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll, {passive: true})
+  window.addEventListener('scroll', handleScroll, { passive: true })
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-// Параллакс сдвиг
+// Параллакс-сдвиг
 const getParallaxStyle = () => {
   const offset = scrollY.value * 0.4
   return {
@@ -27,30 +27,35 @@ const getParallaxStyle = () => {
   }
 }
 
+// Прокрутка к следующему экрану
+// function scrollToNext() {
+//   const height = document.querySelector('.parallax-wrapper').clientHeight
+//   window.scrollTo({ top: height, behavior: 'smooth' })
+// }
 </script>
 
 <template>
   <div class="parallax-wrapper">
     <!-- Фон -->
     <picture class="parallax-bg" :style="getParallaxStyle()">
-      <source :srcset="forestWebp" type="image/webp"/>
-      <img :src="forestFallback" alt="Forest background"/>
+      <source :srcset="forestWebp" type="image/webp" />
+      <img :src="forestFallback" alt="Forest background" />
     </picture>
 
     <!-- Контент -->
     <div class="parallax-content">
       <v-container class="fill-height d-flex flex-column align-center justify-center text-center">
         <v-responsive max-width="800">
-          <h1 class="text-h2 font-weight-bold text-white mb-4">Глаз Неба</h1>
-          <p class="text-subtitle-1 text-white">
-            Интеллектуальная система мониторинга лесов с автономными дронами и ИИ-аналитикой
-          </p>
+          <div class="text-block mt-8">
+            <h1 class="title text-h2">Глаз Неба</h1>
+            <p class="subtitle text-h5">Интеллектуальная система мониторинга лесов с автономными дронами и ИИ-аналитикой</p>
+          </div>
         </v-responsive>
       </v-container>
     </div>
 
     <!-- Стрелка вниз -->
-    <div class="scroll-down" @click="scrollToNext">
+    <div class="scroll-down">
       <v-icon size="40" color="white">mdi-chevron-down</v-icon>
     </div>
   </div>
@@ -86,8 +91,31 @@ const getParallaxStyle = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   padding: 16px;
+}
+
+.text-block {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Стрелка */
@@ -102,11 +130,7 @@ const getParallaxStyle = () => {
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(8px);
-  }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
 }
 </style>
