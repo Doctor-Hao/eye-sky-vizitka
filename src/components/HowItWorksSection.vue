@@ -85,7 +85,7 @@ const droneStyle = computed(() => ({
           :key="index"
           small
           :icon="step.icon"
-          class="timeline-item-wrapper"
+          :class="{ 'active-dot': activeStep === index }"
         >
           <div class="timeline-step card-wrapper" ref="el => stepEls.value[index] = el">
             <v-card
@@ -126,7 +126,7 @@ const droneStyle = computed(() => ({
   </v-container>
 </template>
 
-<style scoped>
+<style>
 .timeline-wrapper {
   position: relative;
   max-width: 1200px;
