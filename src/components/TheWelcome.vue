@@ -63,7 +63,7 @@ const getParallaxStyle = () => {
 
 <style scoped>
 .parallax-wrapper {
-  height: calc(100dvh - 64px); /* учёт высоты app-bar */
+  height: calc(100dvh - 20px); /* учёт высоты app-bar */
   position: relative;
   overflow: hidden;
   width: 100%;

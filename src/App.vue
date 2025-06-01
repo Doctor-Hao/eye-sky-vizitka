@@ -68,7 +68,7 @@ onMounted(() => {
         <!--      <v-btn v-for="item in menuItems" :key="item" text>{{ item }}</v-btn>-->
       </v-container>
     </v-app-bar>
-    <v-main>
+    <v-main class="ma-0 pa-0">
       <RouterView/>
     </v-main>
   </v-app>
